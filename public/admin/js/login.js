@@ -57,9 +57,9 @@ $(".btn-default").click(function(){
 
 
 // })
+var formData;
+function load() {
 
-	var formData;
-$(".btn-primary").click(function() {
 	formData = $("form").serialize();
 	$.ajax({
 		url:"/employee/employeeLogin",
@@ -79,4 +79,10 @@ $(".btn-primary").click(function() {
 		}
 
 	})
+}
+	
+$(".btn-primary").click(function() {
+	load();
 })
+
+
